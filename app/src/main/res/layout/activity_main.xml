@@ -12,26 +12,35 @@
     tools:context="com.example.esai.focus10.MainActivity"
     android:background="@color/colorPrimary">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textSize="20sp"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
+    <android.support.v7.widget.CardView
+        android:layout_width="400px"
+        android:layout_height="200px"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="100dp" />
+        android:elevation="5dp">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo_foco"
-        android:id="@+id/imageView3"
-        android:layout_above="@+id/button2"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_marginStart="41dp"
-        android:layout_marginBottom="180dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo_foco"
+            android:id="@+id/imageView3"
+            android:layout_marginStart="181dp"
+            android:layout_alignBottom="@+id/cardView"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="234dp"
+            android:layout_height="66dp"
+            android:text="@string/welcome"
+            android:textSize="20sp"
+            android:textColor="@color/black_overlay"
+            android:id="@+id/textView"
+            android:paddingTop="70px"
+            android:paddingLeft="60px"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </android.support.v7.widget.CardView>
+
 
     <Button
         android:layout_width="wrap_content"
@@ -40,5 +49,8 @@
         android:text="@string/logout"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
+
+
+
 
 </RelativeLayout>
