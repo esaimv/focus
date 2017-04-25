@@ -1,13 +1,20 @@
 package com.example.esai.focus10;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+
 
 import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
 
 public class MainActivity extends AppCompatActivity {
+
+    private FloatingActionButton card1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +27,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        if (id == R.id.salir) {
+            LoginManager.getInstance().logOut();
+            goLoginScreen();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
     private void goLoginScreen() {
         Intent intent = new Intent(this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -30,4 +56,7 @@ public class MainActivity extends AppCompatActivity {
         LoginManager.getInstance().logOut();
         goLoginScreen();
     }
+
+
+
 }

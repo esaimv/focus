@@ -12,26 +12,65 @@
     tools:context="com.example.esai.focus10.MainActivity"
     android:background="@color/colorPrimary">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:scrollbars="vertical" />
+
     <android.support.v7.widget.CardView
+         android:layout_width="400px"
+         android:layout_height="200px"
+         android:layout_alignParentEnd="true"
+         android:layout_alignParentStart="true"
+         android:elevation="5dp">
+
+         <TextView
+             android:layout_width="234dp"
+             android:layout_height="66dp"
+             android:text="@string/welcome"
+             android:textSize="20sp"
+             android:textColor="@color/black_overlay"
+             android:id="@+id/textView"
+             android:paddingTop="70px"
+             android:paddingLeft="60px"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentStart="true" />
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:srcCompat="@drawable/logo_foco"
+             android:id="@+id/imageView3"
+             android:layout_marginStart="181dp"
+             android:layout_alignBottom="@+id/cardView"
+             android:layout_alignParentStart="true" />
+     </android.support.v7.widget.CardView>
+
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:onClick="logout"
+         android:text="@string/logout"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentEnd="true" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card1"
+        android:clickable="true"
         android:layout_width="400px"
         android:layout_height="200px"
-        android:layout_alignParentEnd="true"
+        android:elevation="5dp"
+        android:layout_marginTop="110dp"
+        android:layout_below="@+id/cardView2"
         android:layout_alignParentStart="true"
-        android:elevation="5dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo_foco"
-            android:id="@+id/imageView3"
-            android:layout_marginStart="181dp"
-            android:layout_alignBottom="@+id/cardView"
-            android:layout_alignParentStart="true" />
-
+        android:layout_alignParentEnd="true">
         <TextView
             android:layout_width="234dp"
             android:layout_height="66dp"
-            android:text="@string/welcome"
+            android:text="TEMA I"
             android:textSize="20sp"
             android:textColor="@color/black_overlay"
             android:id="@+id/textView"
@@ -41,16 +80,67 @@
             android:layout_alignParentStart="true" />
     </android.support.v7.widget.CardView>
 
+    <android.support.v7.widget.CardView
+        android:layout_width="400px"
+        android:layout_height="200px"
+        android:elevation="5dp"
+        android:layout_marginTop="220dp"
+        android:layout_below="@+id/cardView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:layout_width="234dp"
+            android:layout_height="66dp"
+            android:text="TEMA II"
+            android:textSize="20sp"
+            android:textColor="@color/black_overlay"
+            android:id="@+id/textView"
+            android:paddingTop="70px"
+            android:paddingLeft="60px"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </android.support.v7.widget.CardView>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="logout"
-        android:text="@string/logout"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+    <android.support.v7.widget.CardView
+        android:layout_width="400px"
+        android:layout_height="200px"
+        android:elevation="5dp"
+        android:layout_marginTop="330dp"
+        android:layout_below="@+id/cardView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:layout_width="234dp"
+            android:layout_height="66dp"
+            android:text="TEMA III"
+            android:textSize="20sp"
+            android:textColor="@color/black_overlay"
+            android:id="@+id/textView"
+            android:paddingTop="70px"
+            android:paddingLeft="60px"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </android.support.v7.widget.CardView>
 
-
-
+    <android.support.v7.widget.CardView
+        android:layout_width="400px"
+        android:layout_height="200px"
+        android:elevation="5dp"
+        android:layout_marginTop="440dp"
+        android:layout_below="@+id/cardView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:layout_width="234dp"
+            android:layout_height="66dp"
+            android:text="TEMA IV"
+            android:textSize="20sp"
+            android:textColor="@color/black_overlay"
+            android:id="@+id/textView"
+            android:paddingTop="70px"
+            android:paddingLeft="60px"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </android.support.v7.widget.CardView>
 
 </RelativeLayout>

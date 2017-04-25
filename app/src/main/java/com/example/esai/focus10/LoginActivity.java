@@ -3,7 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
-
+import android.app.ActionBar;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -19,6 +19,8 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //ActionBar actionBar = getActionBar();
+        //actionBar.hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
